@@ -21,4 +21,9 @@ class TestTicketRaffle < Minitest::Test
 		assert_equal("Invalid", set_up_username(username))
 	end	
 
+	def test_assert_that_6_char_username_is_valid
+		username = "bm4yle"
+		assert_equal("Valid", set_up_username(username))
+	end	
+
 end
