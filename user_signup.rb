@@ -8,3 +8,9 @@ def set_up_username(username)
 		"Invalid"
 	end	
 end
+
+def set_up_email(email)
+	email = email.to_s
+	email.class
+
+end
