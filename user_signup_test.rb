@@ -44,4 +44,9 @@ class TestTicketRaffle < Minitest::Test
 			assert_equal("Valid", set_up_email(email, verify_email))
 		end
 
+		def test_assert_that_password_is_string
+			password = "p4ssword"
+			assert_equal(String, set_up_password(password))
+		end
+
 end

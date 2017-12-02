@@ -19,3 +19,9 @@ def set_up_email(email,verify_email)
 		"Invalid"
 	end	
 end
+
+def set_up_password(password)
+	password = password.to_s
+	password.class
+
+end
