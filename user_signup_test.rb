@@ -126,6 +126,6 @@ class TestUserSignUp < Minitest::Test
 		verify_email ="bmayle17@gmail.com"
 		password = "adminP4$$word"
 		verify_password = "adminP4$$word"
-		assert_equal("Congradulations, Your Account Is Ready!", valid_account(username, email, verify_email, password, verify_password))
+		assert_equal("Congratulations, Your Account Is Ready!", valid_account(username, email, verify_email, password, verify_password))
 	end
 end

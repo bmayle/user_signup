@@ -130,12 +130,12 @@ def valid_account(username, email, verify_email, password, verify_password)
 		set_up_email(email,verify_email) == "Valid" &&
 		set_up_password(password) == "Valid" &&
 		password_has_uppercase(password) == "Valid" &&
-		password_has_lowercase == "Valid" &&
+		password_has_lowercase(password) == "Valid" &&
 		password_has_number(password) == "Valid" && 
 		password_has_special_char(password) == "Valid" &&
 		valid_password(password) == "Valid" &&
 		password_is_valid(password, verify_password) == "Valid"
-			"Congradulations, Your Account Is Ready!"
+			"Congratulations, Your Account Is Ready!"
 		else
 			"Sorry, Invalid!"
 	end
