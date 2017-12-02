@@ -94,5 +94,8 @@ class TestUserSignUp < Minitest::Test
 		assert_equal("Invalid", password_has_special_char(password))
 	end
 
-
+	def test_assert_that_a_password_that_contains_a_spec_char_is_valid
+		password = "$uperm4n"
+		assert_equal("Valid", password_has_special_char(password))
+	end
 end
