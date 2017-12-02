@@ -87,8 +87,8 @@ def password_has_special_char(password)
 	password.class
 	sp_char = []
 	characters = ["!", "@", "#", "$", "%", "^", "&", "*", "<", ">", "?", "_", "-", "=", "+"]
-	numbers.each do |special_char|
-		if password.include?(special_char.to_s)
+	characters.each do |special_char|
+		if password.include?(special_char)
 			sp_char = true
 		end
 	end
