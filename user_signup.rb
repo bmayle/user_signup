@@ -31,3 +31,20 @@ def set_up_password(password)
 	end	
 end
 
+def password_has_uppercase(password)
+	password = password.to_s
+	password.class
+	caps = []
+	uppercase = *('A'..'Z')
+	uppercase.each do |letter|
+		if password.include?(letter)
+			caps = true
+		end
+	end
+	if caps == true
+		"Valid"
+	else
+		"Invalid"
+	end
+end
+

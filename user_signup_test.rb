@@ -59,4 +59,9 @@ class TestTicketRaffle < Minitest::Test
 			assert_equal("Valid", set_up_password(password))
 		end
 
-end
+		def test_assert_that_password_contains_uppercase_letter
+			password = "password"
+			assert_equal("Invalid", password_has_uppercase(password))
+		end
+
+	end
