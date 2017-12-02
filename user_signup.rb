@@ -9,13 +9,11 @@ def set_up_username(username)
 	end	
 end
 
-def set_up_email(email)
+def set_up_email(email,verify_email)
 	email = email.to_s
 	email.class
-	userName = userName.to_s
-	userName.class
 
-	if email == [userName.to_s + "@gmail.com", userName.to_s + "@yahoo.com", userName.to_s + "@aol.com", userName.to_s + "@hotmail.com", userName.to_s + "@outlook.com", userName.to_s + "@yandex.com", userName.to_s + "@protonmail.com", userName.to_s + "@zoho.com", userName.to_s + "@mail.com", userName.to_s + "@tutamail.com"]
+	if email == verify_email
 		"Valid"
 	else
 		"Invalid"

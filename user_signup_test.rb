@@ -32,14 +32,16 @@ class TestTicketRaffle < Minitest::Test
 	# end	
 
 		def test_assert_that_email_is_invalid
-			email = "bmayle17"
-			assert_equal("Invalid", set_up_email(email))
+			email = "bmayle17@gmail.com"
+			verify_email = "bmayle17@outlook.com"
+			assert_equal("Invalid", set_up_email(email, verify_email))
 		end
 
 
 		def test_assert_that_email_is_valid
 			email = "bmayle17@gmail.com"
-			assert_equal("Valid", set_up_email(email))
+			verify_email = "bmayle17@gmail.com"
+			assert_equal("Valid", set_up_email(email, verify_email))
 		end
 
 end
