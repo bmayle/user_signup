@@ -99,7 +99,31 @@ def password_has_special_char(password)
 	end
 end
 
+def valid_password(password)
+	contains_length_requirement = set_up_password(password)
+	contains_caps = password_has_uppercase(password)
+	contains_lower = password_has_lowercase(password)
+	contains_number = password_has_number(password)
+	contains_special_char = password_has_special_char(password)
 
+	if contains_length_requirement == "Valid" &&
+		contains_caps == "Valid" &&
+		contains_lower == "Valid" &&
+		contains_number == "Valid" &&
+		contains_special_char == "Valid" 
+			"Valid"
+		else
+			"Invalid"
+	end
+end
+
+def password_is_valid(password, verify_password)
+	if password == verify_password
+		"Valid"
+	else
+		"Invalid"
+	end
+end
 
 
 
