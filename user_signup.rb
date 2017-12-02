@@ -65,6 +65,24 @@ def password_has_lowercase(password)
 	end
 end
 
+def password_has_number(password)
+	password = password.to_s
+	password.class
+	digit = []
+	numbers = *('0'..'9')
+	numbers.each do |number|
+		if password.include?(number)
+			digit = true
+		end
+	end
+	if digit == true
+		"Valid"
+	else
+		"Invalid"
+	end
+end
+
+
 
 
 
