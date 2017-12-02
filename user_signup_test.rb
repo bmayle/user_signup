@@ -73,4 +73,9 @@ class TestTicketRaffle < Minitest::Test
 			password = "ROGERTHAT"
 			assert_equal("Invalid", password_has_lowercase(password))
 		end
+	
+		def test_assert_that_a_password_that_contains_a_lowercase_letter_is_valid
+			password = "slingshot"
+			assert_equal("Valid", password_has_lowercase(password))
+		end
 	end
