@@ -82,6 +82,23 @@ def password_has_number(password)
 	end
 end
 
+def password_has_special_char(password)
+	password = password.to_s
+	password.class
+	sp_char = []
+	characters = ["!", "@", "#", "$", "%", "^", "&", "*", "<", ">", "?", "_", "-", "=", "+"]
+	numbers.each do |special_char|
+		if password.include?(special_char.to_s)
+			sp_char = true
+		end
+	end
+	if sp_char == true
+		"Valid"
+	else
+		"Invalid"
+	end
+end
+
 
 
 
