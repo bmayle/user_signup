@@ -24,4 +24,10 @@ def set_up_password(password)
 	password = password.to_s
 	password.class
 
+	if password.length > 7
+		"Valid"
+	else
+		"Invalid"
+	end	
 end
+
