@@ -49,9 +49,14 @@ class TestTicketRaffle < Minitest::Test
 		# 	assert_equal(String, set_up_password(password))
 		# end
 
-		def test_assert_that_7_char_is_invalid
+		def test_assert_that_7_char_password_is_invalid
 			password = "bem1234"
 			assert_equal("Invalid", set_up_password(password))
+		end
+
+		def test_assert_that_8_char_password_is_valid
+			password = "bmayle17"
+			assert_equal("Valid", set_up_password(password))
 		end
 
 end
