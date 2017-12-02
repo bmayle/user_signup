@@ -110,4 +110,13 @@ class TestUserSignUp < Minitest::Test
 		verify_password = "Chri$tmas"
 		assert_equal("Valid", password_is_valid(password, verify_password))
 	end
+
+	def test_assert_user_sign_up_that_does_not_match_is_invalid
+		username = "bmayle"
+		email = "bmayle17@gmail.com"
+		verify_email ="bmayle17@gmailcom"
+		password = "I_Am_Gr8tn3ss"
+		verify_password = "I_Am_Grtn3ss"
+		assert_equal("Sorry, Invalid!", valid_account(username, email, verify_email, password, verify_password))
+	end
 end
