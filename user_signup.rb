@@ -36,8 +36,8 @@ def password_has_uppercase(password)
 	password.class
 	caps = []
 	uppercase = *('A'..'Z')
-	uppercase.each do |letter|
-		if password.include?(letter)
+	uppercase.each do |cap_letter|
+		if password.include?(cap_letter)
 			caps = true
 		end
 	end
@@ -47,6 +47,24 @@ def password_has_uppercase(password)
 		"Invalid"
 	end
 end
+
+def password_has_lowercase(password)
+	password = password.to_s
+	password.class
+	lower = []
+	lowercase = *('a'..'z')
+	lowercase.each do |lower_letter|
+		if password.include?(lower_letter)
+			lower = true
+		end
+	end
+	if lower == true
+		"Valid"
+	else
+		"Invalid"
+	end
+end
+
 
 
 
