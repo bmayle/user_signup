@@ -26,9 +26,14 @@ class TestTicketRaffle < Minitest::Test
 		assert_equal("Valid", set_up_username(username))
 	end	
 
-	def assert_that_email_is_a_string
-		email = "bmayle17@gmail.com"
-		assert_equal(String, set_up_email(email))
-	end
+	# # def test_assert_that_email_is_a_string
+	# # 	email = "bmayle17@gmail.com"
+	# # 	assert_equal(String, set_up_email(email))
+	# end	
+
+		def test_assert_that_email_is_invalid
+			email = "bmayle17"
+			assert_equal("Invalid", set_up_email(email))
+		end
 
 end
